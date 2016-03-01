@@ -63,6 +63,7 @@ namespace graphics {
         main_camera_->setViewport(new osg::Viewport(0,0, traits_ptr->width, traits_ptr->height));
         main_camera_->setProjectionMatrixAsPerspective(
             30.0f, static_cast<double>(traits_ptr->width)/static_cast<double>(traits_ptr->height), 1.0f, 10000.0f );
+	main_camera_->setClearColor(osg::Vec4(0.9f,0.9f,0.9f,0.2f));
         GLenum buffer = traits_ptr->doubleBuffer ? GL_BACK : GL_FRONT;
         main_camera_->setDrawBuffer(buffer);
         main_camera_->setReadBuffer(buffer);
